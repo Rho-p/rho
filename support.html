@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>CREATER</title>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="apple-mobile-web-app-title" content="Rho's website"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="../Rho/image/rho.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../Rho/image/rho.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../Rho/image/rho.png">
+        <link rel="manifest" href="../Rho/image/rho.png">
+        <link rel="mask-icon" href="../Rho/image/rho.png">
+        <link rel="shortcut icon" href="../Rho/image/rho.png">
+
+        <style>
+            /* 메뉴 스타일 */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropbtn {
+                background-color: #756969;
+                color: black;
+                padding: 10px 30px; /* 메뉴 버튼의 패딩 값을 조정하여 크기를 조절 */
+                font-size: 16px; /*메뉴 글씨 크기 조절, 줄이면 메뉴버튼크기도 줄어듬*/
+                border: none;
+                cursor: pointer;
+            }
+        
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #2a1b33;
+                min-width: 90px; /*커서올리면 나오는 메뉴 너비를 키우려면 조정해야하는 값*/
+                box-shadow: 0 8px 16px 0 rgba(42, 132, 173, 0.2);
+                z-index: 1;
+            }
+        
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        
+            .dropdown-content a {
+                color: rgb(239, 107, 107);
+                padding: 10px 24px;/*커서 올리면 나오는 메뉴 항목 패딩 값 조정해야하는 부분*/
+                text-decoration: none;
+                display: block;
+            }
+        
+            .dropdown-content a:hover {
+                background-color: #4d088d;
+            }
+        </style>
+
+        <!--웹사이트 크기 고정-->
+        <style>
+            body {
+                width: 1000px; /* 페이지의 너비를 1000px로 설정 */
+                height: 600px; /* 페이지의 높이를 600px로 설정 */
+                margin: 0 auto; /* 페이지를 수평 가운데 정렬 */
+                
+            }
+        </style>
+      
+        <!--링크 색변화,믿줄 방지-->
+        <style>
+            
+            a:link{
+                color: white;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                text-decoration: none;
+            }
+       </style>
+
+    
+    </head>
+    <body bgcolor="black">
+
+        <br>
+        <br>
+        <center>
+            <span style="color: white;" title="main">
+                <a href="Rho's_website.html" style="text-decoration-line: none;">
+                    Rho's website
+                </a>
+            </span>
+        </center>
+        <br>
+        <hr>
+
+        
+         
+         <!--메뉴판-->
+         <center>
+            <div class="dropdown">
+               <button class="dropbtn">제작자</button>
+               <div class="dropdown-content">
+                   <a href="creater.html">제작자</a>
+               </div>
+           </div>
+           <div class="dropdown">
+               <button class="dropbtn">제작과정</button>
+               <div class="dropdown-content">
+                   <a href="Production process.html">제작과정</a>
+                   <a href="support.html">후원</a>
+               </div>
+           </div>
+           <div class="dropdown">
+               <button class="dropbtn">포트폴리오</button>
+               <div class="dropdown-content">
+                   <a href="#">VTOL</a>
+                   <a href="#">Website</a>
+                   
+               </div>
+           </div>
+           </center>
+   
+        <hr>
+        <ul style="color: red;">
+            <li>
+                <h2 style="color: white;">
+                    후원 문의
+                </h2>
+            </li>
+            <ul>
+                <li>
+                    <h4 style="color: white;">
+                        shwntm019@gmail.com
+                    </h4>
+                </li>
+                <li>
+                    <h4 style="color: white;">
+                        000-0000-0000
+                    </h4>
+                </li>
+            </ul>
+        </ul>
+        
+        
+
+
+    </body>
+</html>
