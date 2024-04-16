@@ -85,6 +85,7 @@
                 height: 60%; /* 페이지의 높이를 60%로 설정 */
                 margin: 0 auto; /* 페이지를 수평 가운데 정렬 */
                 
+                
             }
         </style>
 
@@ -109,78 +110,140 @@
             }
        </style>
 
+       <!--블로그 구조화하기-->
+       <style>
+        html, body{
+            margin: 0; 
+            padding: 0; 
+            height: 100%;
+            background-color: black;
+            }
+
+        header{
+            width: 100%; 
+            height: 15%;
+            margin: 0 auto;
+            background-color:black;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            }
+        
+
+        nav{
+            width: 15%;
+            height: 70%;
+            float: left;
+            background-color: black;
+            }
+
+        section{
+            width: 70%;
+            height: 70%; 
+            float: left;
+            background-color:black;
+            padding-top: 15%; /*메뉴 바 픽스해서 안보이는 부분만큼 패딩*/
+            }
+
+        aside{
+            width: 15%; 
+            height: 70%; 
+            float: left;
+            background-color: cadetblue;
+            }
+
+        footer{
+            width: 100%; 
+            height: 15%; 
+            clear: both;
+            background-color: black;
+            }
+
+       </style>
+
     </head>
 
-    <body bgcolor="black">
+    <body>
 
          <!--웹사이트 제목-->
-         <br>
-        <br>
-        <center>
-            <span style="color: white;" title="main">
-                <a href="Rho's_website.html" style="text-decoration-line: none;">
-                    Rho's website
-                </a>
-            </span>
-        </center>
-        <br>
-        <hr>
-        <br>
+        
+        <header>
+            <br>
+            <br>
+            <center>
+                <span style="color: white;" title="main">
+                    <a href="Rho's_website.html" style="text-decoration-line: none;">
+                        VTOL 제작 프로젝트
+                    </a>
+                </span>
+            </center>
+                <br>
+                <hr>
+                <br>
 
-         <!--메뉴판-->
-         <center>
-         <div class="dropdown">
-            <button class="dropbtn">제작자</button>
-            <div class="dropdown-content">
-                <a href="creater.html">제작자</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">제작과정</button>
-            <div class="dropdown-content">
-                <a href="Production process.html">제작계획</a>
-                <a href="support.html">후원</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">포트폴리오</button>
-            <div class="dropdown-content">
-                <a href="VTOL_Introduce.html">VTOL</a>
-                <a href="#">Website</a>
-                
-            </div>
-        </div>
-        </center>
-
+                <!--메뉴판-->
+                <center>
+                <div class="dropdown">
+                    <button class="dropbtn">제작자</button>
+                    <div class="dropdown-content">
+                        <a href="creater.html">제작자</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">제작과정</button>
+                    <div class="dropdown-content">
+                        <a href="Production process.html">제작계획</a>
+                        <a href="">시행착오</a>
+                       
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">포트폴리오</button>
+                    <div class="dropdown-content">
+                        <a href="VTOL_Introduce.html">VTOL</a>
+                        <a href="#">Website</a>
+                        <a href="support.html">후원 및 구매문의</a>
+                        
+                    </div>
+                </div>
+            </center>
+        </header>
         <!--주석-->
+        <nav>
+
+        </nav>
 
         <br>
         
-        <hr>
-        <center>
+        <section>
+            <hr>
+            <center>
+                <span style="color: white;">
+                    <h1 title="VTOL 제작">
+                        VTOL 제작 
+                        </h1>
+                </span>
+            </center>
+            <hr>
+            <br>
+            <center>
+                <div>
+                    <img src="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/16a1d54a-99de-4f80-a607-6ed01edb670d" width="100%" height="auto">
+                </div>
+            </center>
+            <br>
+        </section>
+        
+        <footer>
+            <hr>
             <span style="color: white;">
-                <h1 title="VTOL 제작">
-                     VTOL 제작 
-                    </h1>
+            since 2024.01.01
             </span>
-        </center>
-        <hr>
-        <br>
-        <center>
-            <div>
-                <img src="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/16a1d54a-99de-4f80-a607-6ed01edb670d" width="100%" height="auto">
-            </div>
-        </center>
-        <br>
-
-        <!--시작일-->
-        <hr>
-        <span style="color: white;">
-        since 2024.01.01
-        </span>
-        <br>
-        <br>
-        <br>
+            <br>
+            <br>
+            <br>
+        </footer>
         
 
     </body>
