@@ -30,6 +30,7 @@
                 color: black;
                 padding: 10px 30px; /* 메뉴 버튼의 패딩 값을 조정하여 크기를 조절 */
                 font-size: 16px; /*메뉴 글씨 크기 조절, 줄이면 메뉴버튼크기도 줄어듬*/
+                font-weight: bolder;
                 border: none;
                 cursor: pointer;
             }
@@ -49,6 +50,7 @@
 
             .dropdown-content a {
                 color: rgb(239, 107, 107);
+                font-weight: bolder;
                 padding: 10px 24px;/*커서 올리면 나오는 메뉴 항목 패딩 값 조정해야하는 부분*/
                 text-decoration: none;
                 display: block;
@@ -91,113 +93,117 @@
                 text-decoration: none;
             }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header, nav, aside, footer {
-            padding: 20px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
-
-        header {
-            background-color: black;
-            
-        }
-
-        nav, section, aside {
-            flex-grow: 1;
-        }
-        nav{
-            width: 20%;
-            background-color: black;
-        }
-
-        section{
-            width: 60%;
-            background-color: black;
-            text-align:left;
-            padding: 20px;
-        }
-
-        aside {
-            width: 20%;
-            background-color: black;
-        }
-
-        footer {
-            background-color: black;
-        }
-
-        @media only screen and (max-width: 768px) {
-            /* 화면이 768px 이하인 경우 */
-            .container {
-                flex-direction: column;
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: black;
             }
 
-            aside {
-                flex-basis: auto;
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            header, nav, aside, footer {
+                padding: 20px;
+                border: 1px solid #ccc;
+                text-align: center;
+            }
+
+            header {
+                background-color: black;
+                
             }
 
             nav, section, aside {
-                width: 100%;
+                flex-grow: 1;
             }
-        }
-    .BackToV-P-P{
-        text-decoration-line:none;
-        font-size: 24px;
-        color:white;
-    }
+            nav{
+                width: 20%;
+                background-color: black;
+            }
+
+            section{
+                width: 60%;
+                background-color: black;
+                text-align:left;
+                padding: 20px;
+            }
+
+            aside {
+                width: 20%;
+                background-color: black;
+            }
+
+            footer {
+                background-color: black;
+            }
+
+            @media only screen and (max-width: 768px) {
+                /* 화면이 768px 이하인 경우 */
+                .container {
+                    flex-direction: column;
+                }
+
+                aside {
+                    flex-basis: auto;
+                }
+
+                nav, section, aside {
+                    width: 100%;
+                }
+            }
+
+            .BackToV-P-P{
+                text-decoration-line:none;
+                font-size: 24px;
+                color:white;
+                font-weight: bolder;
+            }
          
 
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
+    <div class="container">
+        <header>
+    
+            <a href="VTOL Production Project.html" class="BackToV-P-P">
+                            VTOL 제작 프로젝트
+            </a>
+            <hr>
+            <br>
+    
+            <div class="dropdown">
+                <button class="dropbtn">제작자</button>
+                <div class="dropdown-content">
+                    <a href="creater.html">제작자</a>
+                </div>
+            </div>
 
-        <a href="VTOL Production Project.html" class="BackToV-P-P">
-                        VTOL 제작 프로젝트
-        </a>
-        <hr>
-        <br>
+            <div class="dropdown">
+                <button class="dropbtn">제작과정</button>
+                <div class="dropdown-content">
+                    <a href="Reasons and Motivation for Creation.html">제작 계기와 이유</a>
+                    <a href="">시행착오</a>
+                   
+                </div>
+            </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">제작자</button>
-            <div class="dropdown-content">
-                <a href="creater.html">제작자</a>
+            <div class="dropdown">
+                <button class="dropbtn">포트폴리오</button>
+                <div class="dropdown-content">
+                    <a href="VTOL_Introduce.html">VTOL</a>
+                    <a href="#">Website</a>
+                    <a href="support.html">후원 및 구매문의</a>
+                    
+                </div>
             </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">제작과정</button>
-            <div class="dropdown-content">
-                <a href="Reasons and Motivation for Creation.html">제작 계기와 이유</a>
-                <a href="">시행착오</a>
-               
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">포트폴리오</button>
-            <div class="dropdown-content">
-                <a href="VTOL_Introduce.html">VTOL</a>
-                <a href="#">Website</a>
-                <a href="support.html">후원 및 구매문의</a>
-                
-            </div>
-        </div>
-    </header>
+        </header>
 
     <div style="display: flex;"> <!-- nav, section, aside를 가로로 배열하기 위한 추가적인 flex container -->
         <nav>
