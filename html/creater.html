@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <title>CREATER</title>
-        <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTOL</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="apple-mobile-web-app-title" content="Rho's website"/>
+    <meta name="apple-mobile-web-app-title" content="Rho's website"/>
         <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1">
         <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1">
         <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1">
         <link rel="manifest" href="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1">
         <link rel="mask-icon" href="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1">
         <link rel="shortcut icon" href="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1">
-        <style>
-            /* 메뉴 스타일 */
+        
+
+    <style>
+            body{
+                color : white;
+            }
+        
+            /* 가로 메인 메뉴 스타일링 */
             .dropdown {
                 position: relative;
                 display: inline-block;
@@ -28,7 +33,7 @@
                 border: none;
                 cursor: pointer;
             }
-        
+
             .dropdown-content {
                 display: none;
                 position: absolute;
@@ -37,154 +42,203 @@
                 box-shadow: 0 8px 16px 0 rgba(42, 132, 173, 0.2);
                 z-index: 1;
             }
-        
+
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-        
+
             .dropdown-content a {
                 color: rgb(239, 107, 107);
                 padding: 10px 24px;/*커서 올리면 나오는 메뉴 항목 패딩 값 조정해야하는 부분*/
                 text-decoration: none;
                 display: block;
             }
-        
+
             .dropdown-content a:hover {
                 background-color: #4d088d;
             }
-        </style>
 
-        <!--웹사이트 크기 고정-->
-        <style>
-            body {
-                width: 100%; /* 페이지의 너비를 100%로 설정 */
-                height: 60%; /* 페이지의 높이를 60%로 설정 */
-                margin: 0 auto; /* 페이지를 수평 가운데 정렬 */
-                
+                /* 세로 서브 메뉴 스타일링 */
+            ul {
+                list-style-type: none; /* 목록 기호 제거 */
+                padding: 0;
+                margin: 0;
+                width: 200px; /* 메뉴 너비 */
+                background-color: #f1f1f1; /* 배경색 */
             }
-        </style>
-      
-        <!--링크 색변화,믿줄 방지-->
-        <style>
+
+            li a {
+                display: block;
+                padding: 10px 15px;
+                text-decoration: none;
+                color: #333;
+            }
+
+            li a:hover {
+                background-color: #ddd; /* 호버시 배경색 변경 */
+            }
+        
+
+            <!--링크 색변화,믿줄 방지-->
+        
             
             a:link{
-                color: white;
+                color: black;
                 text-decoration: none;
             }
             a:visited {
-                color: white;
+                color: black;
                 text-decoration: none;
             }
-       </style>
-        
-    </head>
 
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
 
-    <body bgcolor="black">
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-        
-        
-        <!-- 스크립트 -->
-        <script>
-            // JavaScript
-            // 클릭시 dropdown-content가 보이게끔 만들어주는 스크립트
-            document.addEventListener("DOMContentLoaded", function(event) { 
-                var dropdowns = document.getElementsByClassName("dropdown");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].addEventListener("click", function() {
-                        this.classList.toggle("active");
-                        var dropdownContent = this.getElementsByClassName("dropdown-content")[0];
-                        if (dropdownContent.style.display === "block") {
-                            dropdownContent.style.display = "none";
-                        } else {
-                            dropdownContent.style.display = "block";
-                        }
-                    });
-                }
-            });
-        </script>
+        header, nav, section, aside, footer {
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
 
-        <br>
-        <br>
-        <center>
-            <span style="color: white;" title="main">
-                <a href="Rho's_website.html" style="text-decoration-line: none;">
-                    Rho's website
-                </a>
-            </span>
-        </center>
-        <br>
+        header {
+            background-color: black;
+            
+        }
+
+        nav, section, aside {
+            flex-grow: 1;
+        }
+        nav{
+            width: 20%;
+            background-color: black;
+        }
+
+        section{
+            width: 60%;
+            background-color: black;
+        }
+
+        aside {
+            width: 20%;
+            background-color: black;
+        }
+
+        footer {
+            background-color: black;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* 화면이 768px 이하인 경우 */
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                flex-basis: auto;
+            }
+
+            nav, section, aside {
+                width: 100%;
+            }
+        }
+
+         
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+
+        <h1 href="Rho's_website.html" style="text-decoration-line: none;">
+                        VTOL 제작 프로젝트
+        </h1>
         <hr>
 
-         <!--메뉴판-->
-         <center>
-            <div class="dropdown">
-               <button class="dropbtn">제작자</button>
-               <div class="dropdown-content">
-                   <a href="creater.html">제작자</a>
-               </div>
-           </div>
-           <div class="dropdown">
-               <button class="dropbtn">제작과정</button>
-               <div class="dropdown-content">
-                   <a href="Production process.html">제작계획</a>
-                   <a href="support.html">후원</a>
-               </div>
-           </div>
-           <div class="dropdown">
-               <button class="dropbtn">포트폴리오</button>
-               <div class="dropdown-content">
-                   <a href="VTOL_Introduce.html">VTOL</a>
-                   <a href="#">Website</a>
-                   
-               </div>
-           </div>
-           </center>
-   
-        <hr>
-
-        <center>
-            <span style="color: white;">
-                <h1 title="제작자">
-                     제작자 
-                    </h1>
-            </span>
-        </center>
-        <hr>
-        <br>
-        <div>
-            <img src="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1" width="64" height="42.5">
+        <div class="dropdown">
+            <button class="dropbtn">제작자</button>
+            <div class="dropdown-content">
+                <a href="creater.html">제작자</a>
+            </div>
         </div>
-        <span style="color: white;">
-            <h2 title="Junseo Rho">
-                노준서
-                <li>총괄자</li>
-                <details>
-                    <summary>업무</summary>
-                    <p>기획</p>
-                    <p>설계-AutoCad</p>
-                    <p>제작</p>
-                    <p>프로그래밍-HTML/CSS/Javascript</p>
-                    <p>자본충당</p>
-                    
-                    
-                </details>
+        <div class="dropdown">
+            <button class="dropbtn">제작과정</button>
+            <div class="dropdown-content">
+                <a href="Production process.html">제작계획</a>
+                <a href="">시행착오</a>
                
-            </h2>
-        </span>
-        
-        <br>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">포트폴리오</button>
+            <div class="dropdown-content">
+                <a href="VTOL_Introduce.html">VTOL</a>
+                <a href="#">Website</a>
+                <a href="support.html">후원 및 구매문의</a>
+                
+            </div>
+        </div>
+    </header>
 
-        <!--시작일-->
-        <hr>
-        <span style="color: white;">
+    <div style="display: flex;"> <!-- nav, section, aside를 가로로 배열하기 위한 추가적인 flex container -->
+        <nav>
+            <h2>Navigation</h2>
+            <center>
+            <ul>
+                <li><a href="#">메뉴 항목 1</a></li>
+                <li><a href="#">메뉴 항목 2</a></li>
+                <li><a href="#">메뉴 항목 3</a></li>
+                <li><a href="#">메뉴 항목 4</a></li>
+                <li><a href="#">메뉴 항목 5</a></li>
+            </ul>
+            </center>
+        </nav>
+
+        <section>
+           <div>
+            <img src="https://github.com/Nowhale019/nowhale019.github.io/assets/163380329/268b944c-310c-426e-8ef3-380027d3dbb1" width="64" height="42.5">
+            </div>
+            <span style="color: white;">
+                <h2 title="Junseo Rho">
+                    노준서
+                    <li>총괄자</li>
+                    <details>
+                        <summary>업무</summary>
+                        <p>기획</p>
+                        <p>설계-AutoCad</p>
+                        <p>제작</p>
+                        <p>프로그래밍-HTML/CSS/Javascript</p>
+                        <p>자본충당</p>
+                    </details>
+                </h2>
+            </span>
+        </section>
+
+        <aside>
+            <h2>Sidebar</h2>
+        </aside>
+    </div>
+
+    <footer>
+        <a>footer</a>
+    </footer>
+    
+    <span style="color: white; clear: both;">
         since 2024.01.01
         </span>
-        <br>
-        <br>
-        <br>
+</div>
 
-        
-    </body>
+</body>
 </html>
