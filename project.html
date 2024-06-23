@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Rho's Blog</title>
+    <style>
+        /* 동일한 CSS 스타일을 사용 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        header {
+            background: url('배경이미지.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+        header h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 2rem;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        nav {
+            background: #555;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-align: center;
+            width: 100%;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+        }
+        .project-box {
+            background: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            border: 2px solid #555;
+            cursor: pointer; /* 마우스 포인터를 손가락 형태로 변경 */
+            transition: background-color 0.3s ease; /* 배경색 변화에 애니메이션 추가 */
+        }
+        .project-box:hover {
+            background-color: #555; /* 호버 상태에서 배경색 변경 */
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -500px;
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            transition: left 0.3s ease;
+            z-index: 2;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 1rem 0;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            z-index: 3;
+        }
+        .sidebar.open {
+            left: 0;
+        }
+        .main-content {
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        .main-content.shift {
+            transform: translateX(250px);
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 0;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                width: 90%;
+                padding: 1rem;
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                margin: 0 0.5rem;
+            }
+            .project-box {
+                height: 150px;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 1.5rem 0;
+            }
+            header h1 {
+                font-size: 1.2rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            .project-box {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">Menu</button>
+    <div class="sidebar" id="sidebar">
+        <h2>Sidebar</h2>
+        <a href="index.html">Home</a>
+        <a href="about.html">Introduce</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>Project</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Introduce</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="container">
+            <div class="project-box" onclick="navigateToProject1()">
+                Project 1
+            </div>
+            <div class="project-box">
+                프로젝트 2
+            </div>
+            <div class="project-box">
+                프로젝트 3
+            </div>
+            <div class="project-box">
+                프로젝트 4
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 나의 블로그. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var mainContent = document.getElementById('main-content');
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                mainContent.classList.remove('shift');
+            } else {
+                sidebar.classList.add('open');
+                mainContent.classList.add('shift');
+            }
+        }
+
+        function navigateToProject1() {
+            window.location.href = 'project1.html';
+        }
+    </script>
+</body>
+</html>
