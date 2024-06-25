@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Rho's Blog</title>
+    <link rel="stylesheet" href="style.css"> <!--외부 CSS 파일 연결-->
+    <script src="script.js"></script> <!-- 외부 JS 파일 연결 -->
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">Menu</button>
+    <div class="sidebar" id="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="project1.html">Project 1</a></li>
+                    <li><a href="">Project 2</a></li>
+                    <li><a href="">Project 3</a></li>
+                    <li><a href="">Project 4</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>Project 1</h1>
+        </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">Introduce</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+            </nav>
+        <div class="container">
+            <img src="https://github.com/Rho-p/Rho.github.io/assets/163380329/25d5e265-67fb-403b-b777-66a93767066f" alt="프로젝트1 이미지">
+            <br>
+            <p>여기에 프로젝트1에 대한 설명이 들어갑니다. 프로젝트의 목표, 주요 기능, 사용된 기술 등을 포함할 수 있습니다.</p>
+        </div>
+        <footer>
+            <p>&copy; 2024 나의 블로그. All rights reserved.</p>
+        </footer>
+    </div>
+  
+</body>
+</html>
