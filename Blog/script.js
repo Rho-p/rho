@@ -12,6 +12,6 @@ function toggleSidebar() {
     }
 }
 
-function navigateToProject1() {
-    window.location.href = 'project1.html';
+function navigateToProjectVTOL() {
+    window.location.href = 'project_VTOL.html';
 }
