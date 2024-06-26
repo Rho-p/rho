@@ -42,6 +42,20 @@ nav a {
     margin: 0 1rem;
     text-decoration: none;
 }
+/*Project VTOL nav*/
+.nav_VTOL{
+    background: #320358;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 100%;
+}
+.nav_VTOL a{
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
 .container {
     margin: 2rem auto;
     background: #fff;
@@ -255,4 +269,3 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #555;
 }
-
