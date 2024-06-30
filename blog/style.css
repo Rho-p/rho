@@ -71,7 +71,7 @@ nav a {
 .container_off_grid_template_columns {
     margin: 2rem auto;
     background: #fff;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: grid;
     /*grid-template-columns: repeat(2, 1fr); 내용 가운데 나누기*/
