@@ -13,12 +13,23 @@
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">Menu</button>
     <div class="sidebar" id="sidebar">
-        <h2>Sidebar</h2>
-        <a href="home.html">Home</a>
-        <a href="about.html">Introduce</a>
-        <a href="project.html">Project</a>
-        <a href="contact.html">Contact</a>
-    </div>
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="project1.html">Project 1</a></li>
+                        <li><a href="">Project N/A</a></li>
+                        <li><a href="">Project N/A</a></li>
+                        <li><a href="">Project N/A</a></li>
+                    </ul>
+                </li>
+                <li><a href="posting.html">Posting</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     <div class="main-content" id="main-content">
         <header>
             <h1>Project VTOL</h1>
