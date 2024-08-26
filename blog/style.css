@@ -95,12 +95,22 @@ nav a {
 
 .post {
 margin-bottom: 2rem;
-cursor: pointer;
 }
 .post h2 {
 color: #333;
 }
 .post p {
+line-height: 1.6;
+}
+
+.posting {
+margin-bottom: 2rem;
+cursor: pointer;
+}
+.posting h2 {
+color: #333;
+}
+.posting p {
 line-height: 1.6;
 }
 
