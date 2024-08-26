@@ -92,8 +92,10 @@ nav a {
     display: block;
     margin: 0 auto 1rem;
 }
+
 .post {
 margin-bottom: 2rem;
+cursor: pointer;
 }
 .post h2 {
 color: #333;
@@ -101,6 +103,7 @@ color: #333;
 .post p {
 line-height: 1.6;
 }
+
 .project-box {
     background: #333;
     color: #fff;
